@@ -1,5 +1,5 @@
 build:
-	gcc -o bin/out src/*.c -g
+	gcc -o bin/out src/*.c
 
 clean:
 	rm bin/*
