@@ -2,9 +2,11 @@
 #include "tokenizer.h"
 
 void execute(TOKEN* tokens) {
-	int cells[30000];
+	int cells[5] = {0};
 	size_t pointer = 0;
 	size_t index = 0;
+
+	setbuf(stdout, NULL);
 
 	while(tokens[index] != TK_EOF) {
 		switch (tokens[index]) {
@@ -25,7 +27,7 @@ void execute(TOKEN* tokens) {
 				index++;
 				break;
 			case TK_PRINT:
-				printf("%d\n", cells[pointer]);
+				printf("%c", cells[pointer]);
 				index++;
 				break;
 			case TK_INPUT:

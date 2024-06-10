@@ -4,7 +4,7 @@
 #include "tokenizer.h"
 
 TOKEN* tokenize(const char* content) {
-	TOKEN* tokens = malloc(sizeof(TOKEN) * strlen(content));
+	TOKEN* tokens = malloc(sizeof(TOKEN) * strlen(content + 1));
 
 	size_t index = 0;
 	char current_char = content[index];
