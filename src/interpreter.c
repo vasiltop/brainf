@@ -2,7 +2,7 @@
 #include "tokenizer.h"
 
 void execute(TOKEN* tokens) {
-	int cells[5] = {0};
+	int cells[30000] = {0};
 	size_t pointer = 0;
 	size_t index = 0;
 
