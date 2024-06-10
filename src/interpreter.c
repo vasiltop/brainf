@@ -7,6 +7,7 @@ void execute(TOKEN* tokens) {
 	size_t index = 0;
 
 	setbuf(stdout, NULL);
+	setbuf(stdin, NULL);
 
 	while(tokens[index] != TK_EOF) {
 		switch (tokens[index]) {
@@ -31,6 +32,8 @@ void execute(TOKEN* tokens) {
 				index++;
 				break;
 			case TK_INPUT:
+				char c = getchar();
+				cells[pointer] = c;
 				index++;
 				break;
 			case TK_LSQUARE:

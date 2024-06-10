@@ -14,7 +14,6 @@ int get_file_length(FILE* file) {
 }
 
 int main(int argc, char* argv[]) {
-
 	assert(argc == 2);
 	
 	FILE* file = fopen(argv[1], "r");
